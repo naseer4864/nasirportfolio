@@ -142,6 +142,7 @@
   padding: 24px 60px;
   background-color: rgb(89, 244, 78);
   border: 1px solid black;
+  color: black;
   outline: none;
   cursor: pointer;
   transition: all 1s ease-in-out;
@@ -224,6 +225,7 @@
   outline: none;
   margin-bottom: 20px;
   border: 1px solid gray;
+  color: black;
 }
 
 .banner > button:hover {
