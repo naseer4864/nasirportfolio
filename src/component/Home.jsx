@@ -1,5 +1,11 @@
+import { useNavigate } from "react-router-dom";
+
 
 const Home = () => {
+  const navigate = useNavigate()
+  const handleNavigate = () => {
+    navigate("/contact")
+  }
   const downloadResume = () => {
     const link = document.createElement('a');
     link.href = 'https://example.com/resume.pdf';
@@ -14,7 +20,7 @@ const Home = () => {
         <div className="info">
           <h1>SOFTWARE ENGINEER</h1>
           <h2>Hi, I am Naseer, focusing on creating emotional experiences.</h2>
-          <button>HIRE ME</button>
+          <button onClick={handleNavigate}>HIRE ME</button>
         </div>
         <img src="https://i.ibb.co/2sqWndy/mern-removebg-preview.png" alt="" />
       </div>

@@ -367,7 +367,8 @@
   }
   .reviews {
     width: 100%;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
     margin-bottom: 40px;
   }
 
@@ -375,7 +376,17 @@
   .review-2,
   .review-3,
   .review-4 {
-    margin: 8px 0px;
+    margin: 8px 5px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:650px) {
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    width: 97%;
+    gap: 5px;
   }
 }
 
