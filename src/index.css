@@ -243,6 +243,20 @@
   }
 }
 
+@media screen and (max-width:650px) {
+  .banner > p {
+    font-size: 1.1rem;
+  }
+
+  .min-content > p {
+    font-size: 1.1rem;
+  }
+
+  /* .about-header > p {
+    font-size: 0.8rem;
+  } */
+}
+
 .mid-container {
   background-color: rgb(89, 244, 78);
   width: 100%;
@@ -420,7 +434,7 @@
 
 .about-header > p {
   width: 90%;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 30px;
 }
 
