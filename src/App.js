@@ -1,4 +1,5 @@
-import { Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
+import { Routes, Route,useLocation } from "react-router-dom";
 import Home from "./component/Home";
 import About from "./component/About";
 import Portfolio from "./component/Portfolio";
@@ -8,6 +9,11 @@ import { Fragment } from "react";
 import Footer from "./component/footer";
 
 function App() {
+  const location = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <Fragment>
       <Routes>
