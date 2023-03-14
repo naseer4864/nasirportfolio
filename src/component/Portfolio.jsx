@@ -1,9 +1,12 @@
+import JumpExample from "./jump";
+
 const Portfolio = () => {
   return (
     <div className="port-container">
       <div className="port-header">
-        <h1>Portfolio</h1>
-        <p>Checkout my recent work</p>
+        <JumpExample/>
+        {/* <h1>Portfolio</h1>
+        <p>Checkout my recent work</p> */}
       </div>
       <div className="recent-works-container">
         <div className="recent-1">
