@@ -31,7 +31,7 @@ const Home = () => {
   };
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "https://example.com/resume.pdf";
+    link.href = "https://drive.google.com/file/d/10l70naIIvmGY5spMKIyl0w_ZpQYojkye/view?usp=drivesdk";
     link.download = "resume.pdf";
     document.body.appendChild(link);
     link.click();
