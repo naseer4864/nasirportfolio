@@ -1,32 +1,98 @@
 import { useNavigate } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
+const infocontainer = {
+  visible: {
+    scale: 1,
+    transition: { type: "spring", stiffness: 260, damping: 20 },
+  },
+  hidden: { scale: 0 },
+};
 
+const Square = {
+  hidden: { opacity: 1, transition: { ease: "easeOut", duration: 1 } },
+  visible: { opacity: 0 },
+};
+
+const content = {
+  hidden: {
+    scale: 1,
+    transition: { type: "spring", stiffness: 260, damping: 20 },
+  },
+  visible: { scale: 0 },
+};
 const Home = () => {
-  const navigate = useNavigate()
+  const animation = useAnimation();
+  const { ref, inView } = useInView({ threshold: 0.22 });
+  const { reF, InView } = useInView({ threshold: 0.22});
+  const { Ref, inViews } = useInView({ threshold: 0.22 });
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible");
+    }
+    if (!inView) {
+      animation.start("hidden");
+    }
+  }, [inView, animation]);
+
+  useEffect(() => {
+    if (InView) {
+      animation.start("visible");
+    }
+    if (!InView) {
+      animation.start("hidden");
+    }
+  }, [InView, animation]);
+
+
+  useEffect(() => {
+    if (inViews) {
+      animation.start("visible");
+    }
+    if (!inViews) {
+      animation.start("hidden");
+    }
+  }, [inViews, animation]);
+
+  const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate("/contact")
-  }
+    navigate("/contact");
+  };
   const downloadResume = () => {
-    const link = document.createElement('a');
-    link.href = 'https://example.com/resume.pdf';
-    link.download = 'resume.pdf';
+    const link = document.createElement("a");
+    link.href = "https://example.com/resume.pdf";
+    link.download = "resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-  }
+  };
   return (
     <div className="home-container">
-      <div className="info-container">
+      <motion.div
+        className="info-container"
+        ref={ref}
+        initial="hidden"
+        animate={animation}
+        variants={infocontainer}
+      >
         <div className="info">
           <h1>SOFTWARE ENGINEER</h1>
           <h2>Hi, I am Naseer, focusing on creating emotional experiences.</h2>
           <button onClick={handleNavigate}>HIRE ME</button>
         </div>
         <img src="https://i.ibb.co/2sqWndy/mern-removebg-preview.png" alt="" />
-      </div>
+      </motion.div>
 
       <div className="banner-container">
-        <div className="banner">
+        <motion.div
+          className="banner"
+          ref={reF}
+          initial="hidden"
+          animate={animation}
+          variants={Square}
+        >
           <h2>MISSION STATEMENT</h2>
           <p>
             I am a Full-Stack Engineer based in Nigeria,dedicated to creating
@@ -37,12 +103,18 @@ const Home = () => {
             and tinkering with electronics.
           </p>
           <button onClick={downloadResume}>DOWNLOAD RESUME</button>
-        </div>
+        </motion.div>
       </div>
       <div className="customer">
         <h1>Reviews</h1>
         <div className="reviews">
-          <div className="review-1">
+          <motion.div
+            className="review-1"
+            ref={Ref}
+            initial="hidden"
+            animate={animation}
+            variants={content}
+          >
             <p>
               We wanted to take a moment to thank you for the outstanding job
               you did on the project for our company. Your expertise and
@@ -50,8 +122,12 @@ const Home = () => {
               with the results.
             </p>
             <h3>Jim one Global motors</h3>
-          </div>
-          <div className="review-2">
+          </motion.div>
+          <motion.div className="review-2"
+          ref={Ref}
+          initial="hidden"
+          animate={animation}
+          variants={content}>
             <p>
               Your dedication to the project was evident, and we were impressed
               by your attention to detail and your commitment to delivering the
@@ -60,8 +136,12 @@ const Home = () => {
               that it was working seamlessly before delivering it to us
             </p>
             <h3>AS salam store</h3>
-          </div>
-          <div className="review-3">
+          </motion.div>
+          <motion.div className="review-3"
+          ref={Ref}
+          initial="hidden"
+          animate={animation}
+          variants={content}>
             <p>
               Your communication skills were exceptional throughout the project,
               and your ability to explain complex technical concepts in simple
@@ -70,8 +150,12 @@ const Home = () => {
               had.
             </p>
             <h3>Micro Finance Bank</h3>
-          </div>
-          <div className="review-4">
+          </motion.div>
+          <motion.div className="review-4"
+          ref={Ref}
+          initial="hidden"
+          animate={animation}
+          variants={content}>
             <p>
               From the very beginning of the project, it was clear that you were
               committed to delivering a high-quality software solution that
@@ -80,7 +164,7 @@ const Home = () => {
               detail was addressed.
             </p>
             <h3>SupperJara</h3>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="mid-container">
