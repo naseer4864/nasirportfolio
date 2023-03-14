@@ -11,23 +11,10 @@ const infocontainer = {
   hidden: { scale: 0 },
 };
 
-const Square = {
-  hidden: { opacity: 1, transition: { ease: "easeOut", duration: 1 } },
-  visible: { opacity: 0 },
-};
-
-const content = {
-  hidden: {
-    scale: 1,
-    transition: { type: "spring", stiffness: 260, damping: 20 },
-  },
-  visible: { scale: 0 },
-};
 const Home = () => {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.22 });
-  const { reF, InView } = useInView({ threshold: 0.22});
-  const { Ref, inViews } = useInView({ threshold: 0.22 });
+
   useEffect(() => {
     if (inView) {
       animation.start("visible");
@@ -36,25 +23,6 @@ const Home = () => {
       animation.start("hidden");
     }
   }, [inView, animation]);
-
-  useEffect(() => {
-    if (InView) {
-      animation.start("visible");
-    }
-    if (!InView) {
-      animation.start("hidden");
-    }
-  }, [InView, animation]);
-
-
-  useEffect(() => {
-    if (inViews) {
-      animation.start("visible");
-    }
-    if (!inViews) {
-      animation.start("hidden");
-    }
-  }, [inViews, animation]);
 
   const navigate = useNavigate();
   const handleNavigate = () => {
@@ -86,13 +54,7 @@ const Home = () => {
       </motion.div>
 
       <div className="banner-container">
-        <motion.div
-          className="banner"
-          ref={reF}
-          initial="hidden"
-          animate={animation}
-          variants={Square}
-        >
+        <div className="banner">
           <h2>MISSION STATEMENT</h2>
           <p>
             I am a Full-Stack Engineer based in Nigeria,dedicated to creating
@@ -103,18 +65,12 @@ const Home = () => {
             and tinkering with electronics.
           </p>
           <button onClick={downloadResume}>DOWNLOAD RESUME</button>
-        </motion.div>
+        </div>
       </div>
       <div className="customer">
         <h1>Reviews</h1>
         <div className="reviews">
-          <motion.div
-            className="review-1"
-            ref={Ref}
-            initial="hidden"
-            animate={animation}
-            variants={content}
-          >
+          <div className="review-1">
             <p>
               We wanted to take a moment to thank you for the outstanding job
               you did on the project for our company. Your expertise and
@@ -122,12 +78,8 @@ const Home = () => {
               with the results.
             </p>
             <h3>Jim one Global motors</h3>
-          </motion.div>
-          <motion.div className="review-2"
-          ref={Ref}
-          initial="hidden"
-          animate={animation}
-          variants={content}>
+          </div>
+          <div className="review-2">
             <p>
               Your dedication to the project was evident, and we were impressed
               by your attention to detail and your commitment to delivering the
@@ -136,12 +88,8 @@ const Home = () => {
               that it was working seamlessly before delivering it to us
             </p>
             <h3>AS salam store</h3>
-          </motion.div>
-          <motion.div className="review-3"
-          ref={Ref}
-          initial="hidden"
-          animate={animation}
-          variants={content}>
+          </div>
+          <div className="review-3">
             <p>
               Your communication skills were exceptional throughout the project,
               and your ability to explain complex technical concepts in simple
@@ -150,12 +98,8 @@ const Home = () => {
               had.
             </p>
             <h3>Micro Finance Bank</h3>
-          </motion.div>
-          <motion.div className="review-4"
-          ref={Ref}
-          initial="hidden"
-          animate={animation}
-          variants={content}>
+          </div>
+          <div className="review-4">
             <p>
               From the very beginning of the project, it was clear that you were
               committed to delivering a high-quality software solution that
@@ -164,7 +108,7 @@ const Home = () => {
               detail was addressed.
             </p>
             <h3>SupperJara</h3>
-          </motion.div>
+          </div>
         </div>
       </div>
       <div className="mid-container">
