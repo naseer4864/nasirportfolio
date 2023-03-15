@@ -31,12 +31,15 @@ const Home = () => {
   };
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "https://drive.google.com/file/d/10l70naIIvmGY5spMKIyl0w_ZpQYojkye/view?usp=drivesdk";
+    link.href = "https://www.dropbox.com/s/swacqhxcctbwjg1/NassCv.pdf?dl=1";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
     link.download = "resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
+  
   return (
     <div className="home-container">
       <motion.div
