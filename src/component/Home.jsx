@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import FadeExample from "./fade";
+
 
 const infocontainer = {
   visible: {
@@ -70,8 +70,7 @@ const Home = () => {
       </div>
       <div className="customer">
         <h1>Reviews</h1>
-        <FadeExample/>
-        {/* <div className="reviews">
+        <div className="reviews">
           <div className="review-1">
             <p>
               We wanted to take a moment to thank you for the outstanding job
@@ -111,7 +110,7 @@ const Home = () => {
             </p>
             <h3>SupperJara</h3>
           </div>
-        </div> */}
+        </div>
       </div>
       <div className="mid-container">
         <img

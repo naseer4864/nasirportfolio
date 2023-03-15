@@ -1,13 +1,39 @@
-import JumpExample from "./jump";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
+
+
+const square = {
+  visible: {
+    opacity: 1,
+    transition: { duration: 1 },
+  },
+  hidden: { opacity: 0 },
+};
 
 const Portfolio = () => {
+  const animation = useAnimation();
+  const { ref, inView } = useInView({ threshold: 0.22 });
+
+  useEffect(() => {
+    if (inView) {
+      animation.start("visible");
+    }
+    if (!inView) {
+      animation.start("hidden");
+    }
+  }, [inView, animation]);
   return (
     <div className="port-container">
-      <div className="port-header">
-        <JumpExample/>
-        {/* <h1>Portfolio</h1>
-        <p>Checkout my recent work</p> */}
-      </div>
+      <motion.div className="port-header"
+      ref={ref}
+      initial="hidden"
+      animate={animation}
+      variants={square}>
+        <h1>Portfolio</h1>
+        <p>Checkout my recent work</p>
+      </motion.div>
       <div className="recent-works-container">
         <div className="recent-1">
           <img
