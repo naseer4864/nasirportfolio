@@ -31,7 +31,7 @@ const Home = () => {
   };
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "https://www.dropbox.com/s/swacqhxcctbwjg1/NassCv.pdf?dl=1";
+    link.href = "https://www.dropbox.com/s/8beclxl083ulrry/nasCV.pdf?dl=0";
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.download = "resume.pdf";
