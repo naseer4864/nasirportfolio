@@ -1,33 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css"
 
 
-const infocontainer = {
-  visible: {
-    scale: 1,
-    transition: { type: "spring", stiffness: 260, damping: 20 },
-  },
-  hidden: { scale: 0 },
-};
-
 
 const Home = () => {
-  const animation = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.22 });
-
-  useEffect(() => {
-    if (inView) {
-      animation.start("visible");
-    }
-    if (!inView) {
-      animation.start("hidden");
-    }
-  }, [inView, animation]);
-
   useEffect(() => {
     Aos.init({duration:2000})
   },[]);
@@ -49,20 +27,15 @@ const Home = () => {
   
   return (
     <div className="home-container">
-      <motion.div
-        className="info-container"
-        ref={ref}
-        initial="hidden"
-        animate={animation}
-        variants={infocontainer}
-      >
+      <div data-aos="zoom-in"
+        className="info-container">
         <div className="info">
           <h1>SOFTWARE ENGINEER</h1>
           <h2>Hi, I am Naseer, focusing on creating emotional experiences.</h2>
           <button onClick={handleNavigate}>HIRE ME</button>
         </div>
         <img src="https://i.ibb.co/2sqWndy/mern-removebg-preview.png" alt="" />
-      </motion.div>
+      </div>
 
       <div className="banner-container">
         <div className="banner">

@@ -1,43 +1,18 @@
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css"
 
 
-const content = {
-  visible: {
-    scale: 1,
-    transition: { type: "spring", stiffness: 260, damping: 20 },
-  },
-  hidden: { scale: 0 },
-};
 
 
 const About = () => {
-  const animation = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.22 });
-
-  useEffect(() => {
-    if (inView) {
-      animation.start("visible");
-    }
-    if (!inView) {
-      animation.start("hidden");
-    }
-  }, [inView, animation]);
-
   useEffect(() => {
     Aos.init({duration:2000})
   },[]);
 
   return (
     <div className="about-container">
-      <motion.div className="about-header"
-      ref={ref}
-      initial="hidden"
-      animate={animation}
-      variants={content}>
+      <div className="about-header" data-aos="zoom-out">
         <h1>ABOUT ME</h1>
       <p>
         I am a Full-Stack Software Engineer who believes that every line of code
@@ -49,7 +24,7 @@ const About = () => {
         great outdoors or experimenting in the kitchen, constantly seeking
         inspiration for my next project.
       </p>
-      </motion.div>
+      </div>
       <div className="about-banner">
         <div className="about-content">
           <div className="sta-box" data-aos="flip-up">

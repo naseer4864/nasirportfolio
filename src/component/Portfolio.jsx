@@ -1,45 +1,20 @@
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css"
 
 
-const square = {
-  visible: {
-    opacity: 1,
-    transition: { duration: 1 },
-  },
-  hidden: { opacity: 0 },
-};
 
 const Portfolio = () => {
-  const animation = useAnimation();
-  const { ref, inView } = useInView({ threshold: 0.22 });
-
-  useEffect(() => {
-    if (inView) {
-      animation.start("visible");
-    }
-    if (!inView) {
-      animation.start("hidden");
-    }
-  }, [inView, animation]);
-
   useEffect(() => {
     Aos.init({duration:2000})
   },[]);
 
   return (
     <div className="port-container">
-      <motion.div className="port-header"
-      ref={ref}
-      initial="hidden"
-      animate={animation}
-      variants={square}>
+      <div className="port-header" data-aos="zoom-in">
         <h1>Portfolio</h1>
         <p>Checkout my recent work</p>
-      </motion.div>
+      </div>
       <div className="recent-works-container">
         <div className="recent-1" data-aos="fade-up">
           <img
