@@ -1,7 +1,8 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 
 const square = {
@@ -24,6 +25,11 @@ const Portfolio = () => {
       animation.start("hidden");
     }
   }, [inView, animation]);
+
+  useEffect(() => {
+    Aos.init({duration:1000})
+  },[]);
+
   return (
     <div className="port-container">
       <motion.div className="port-header"
@@ -35,7 +41,7 @@ const Portfolio = () => {
         <p>Checkout my recent work</p>
       </motion.div>
       <div className="recent-works-container">
-        <div className="recent-1">
+        <div className="recent-1" data-aos="fade-up">
           <img
             src="https://i.ibb.co/PjxnSVy/Screen-Shot-2023-03-13-at-11-05-35-AM.png"
             alt=""
@@ -48,7 +54,7 @@ const Portfolio = () => {
             DEMO
           </a>
         </div>
-        <div className="recent-2">
+        <div className="recent-2" data-aos="fade-down">
           <img
             src="https://i.ibb.co/9w8F2M4/Screen-Shot-2023-03-13-at-11-07-01-AM.png"
             alt=""
@@ -61,7 +67,7 @@ const Portfolio = () => {
             DEMO
           </a>
         </div>
-        <div className="recent-3">
+        <div className="recent-3" data-aos="fade-up">
           <img
             src="https://i.ibb.co/nnQ76T9/Screen-Shot-2023-03-13-at-11-07-37-AM.png"
             alt=""
@@ -74,7 +80,7 @@ const Portfolio = () => {
             DEMO
           </a>
         </div>
-        <div className="recent-4">
+        <div className="recent-4" data-aos="fade-down">
           <img
             src="https://i.ibb.co/2M4K5RS/Screen-Shot-2023-03-13-at-11-08-18-AM.png"
             alt=""
@@ -87,7 +93,7 @@ const Portfolio = () => {
             DEMO
           </a>
         </div>
-        <div className="recent-5">
+        <div className="recent-5" data-aos="fade-up">
           <img
             src="https://i.ibb.co/cc3vdqY/Screen-Shot-2023-03-13-at-11-09-21-AM.png"
             alt=""
@@ -100,7 +106,7 @@ const Portfolio = () => {
             DEMO
           </a>
         </div>
-        <div className="recent-6">
+        <div className="recent-6" data-aos="fade-down">
           <img
             src="https://i.ibb.co/kDGJJjn/Screen-Shot-2023-03-13-at-11-10-38-AM.png"
             alt=""

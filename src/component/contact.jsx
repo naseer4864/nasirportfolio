@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
+import Aos from "aos";
+import "aos/dist/aos.css"
+
 
 const defaultForm = {
   fullname: "",
@@ -42,11 +45,15 @@ const Contact = () => {
         console.log(error);
       });
   };
+  useEffect(() => {
+    Aos.init({duration:1000})
+  },[]);
+
   return (
     <div className="contact-container">
       <div className="map-container">
-        <h1>Contact</h1>
-        <iframe
+        <h1 data-aos="flip-right">Contact</h1>
+        <iframe data-aos="zoom-in"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.125109309582!2d4.5423594148250235!3d7.776556509484942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103787ecec516945%3A0x59bdb37d614c67ca!2sGbongan%20-%20Ibadan%20Rd%2C%20Osogbo%2C%20Osun!5e0!3m2!1sen!2sng!4v1678671039167!5m2!1sen!2sng"
           title="map"
           width="1200"
@@ -58,7 +65,7 @@ const Contact = () => {
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <h3>Get In Touch</h3>
-          <textarea
+          <textarea data-aos="fade-down"
             name="message"
             id=""
             required
@@ -69,7 +76,7 @@ const Contact = () => {
             onChange={handleOnchange}
           ></textarea>
           <div className="input">
-            <input
+            <input data-aos="flip-right"
               type="text"
               required
               placeholder="Enter your name"
@@ -77,7 +84,7 @@ const Contact = () => {
               name="fullname"
               onChange={handleOnchange}
             />
-            <input
+            <input data-aos="flip-left"
               type="email"
               required
               placeholder="Email"
@@ -86,7 +93,7 @@ const Contact = () => {
               onChange={handleOnchange}
             />
           </div>
-          <input
+          <input data-aos="flip-right"
             type="number"
             required
             placeholder="Enter phone"
@@ -94,7 +101,7 @@ const Contact = () => {
             name="number"
             onChange={handleOnchange}
           />
-          <input
+          <input data-aos="flip-left"
             type="text"
             required
             placeholder="Enter Subject"
@@ -102,34 +109,34 @@ const Contact = () => {
             name="subject"
             onChange={handleOnchange}
           />
-          <button type="submit">SEND</button>
+          <button type="submit" data-aos="fade-up">SEND</button>
         </form>
         <div className="social-container">
-          <h3>CONTACT ME</h3>
+          <h3 data-aos="zoom-out">CONTACT ME</h3>
           <div className="addre">
-            <div className="same">
+            <div className="same" data-aos="fade-down">
               <i className="fa-solid fa-house"></i>
-              <p>Osun Nigeria</p>
+              <p data-aos="fade-up">Osun Nigeria</p>
             </div>
-            <h5>Onward area Oshogbo</h5>
+            <h5 data-aos="zoom-in">Onward area Oshogbo</h5>
           </div>
-          <div className="phone">
-            <div className="same">
-              <i className="fa-solid fa-phone"></i>
-              <a href="tel:+2349134914475">+234 913 491 4475</a>
+          <div className="phone" data-aos="fade-down">
+            <div className="same" data-aos="fade-up">
+              <i className="fa-solid fa-phone" data-aos="zoom-in"></i>
+              <a href="tel:+2349134914475" data-aos="zoom-out">+234 913 491 4475</a>
             </div>
-            <h5>Mon to Friday 9am to 8pm</h5>
+            <h5 data-aos="fade">Mon to Friday 9am to 8pm</h5>
           </div>
-          <div className="mail">
-            <div className="same">
+          <div className="mail" data-aos="fade-down">
+            <div className="same" data-aos="fade-up">
               <i className="fa-solid fa-envelope"></i>
               <a href="mailto:naseernoor4864@gmail.com">
                 naseernoor4864@gmail.com
               </a>
             </div>
-            <h5>Send us your query anytime!</h5>
+            <h5 data-aos="zoom-in">Send us your query anytime!</h5>
           </div>
-          <div className="app">
+          <div className="app" data-aos="flip-left">
             <a href=" https://wa.me/2347036676508">
               <img
                 src="https://i.ibb.co/YfyN3V8/whatsapp.png"
