@@ -29,7 +29,7 @@ const Home = () => {
   }, [inView, animation]);
 
   useEffect(() => {
-    Aos.init({duration:1000})
+    Aos.init({duration:2000})
   },[]);
   
   const navigate = useNavigate();
@@ -81,7 +81,7 @@ const Home = () => {
       <div className="customer">
         <h1 data-aos="fade">Reviews</h1>
         <div className="reviews">
-          <div className="review-1" data-aos="fade-right">
+          <div className="review-1" data-aos="fade-down">
             <p>
               We wanted to take a moment to thank you for the outstanding job
               you did on the project for our company. Your expertise and
@@ -90,7 +90,7 @@ const Home = () => {
             </p>
             <h3>Jim one Global motors</h3>
           </div>
-          <div className="review-2" data-aos="fade-left">
+          <div className="review-2" data-aos="fade-up">
             <p>
               Your dedication to the project was evident, and we were impressed
               by your attention to detail and your commitment to delivering the
@@ -100,7 +100,7 @@ const Home = () => {
             </p>
             <h3>AS salam store</h3>
           </div>
-          <div className="review-3" data-aos="fade-right">
+          <div className="review-3" data-aos="fade-down">
             <p>
               Your communication skills were exceptional throughout the project,
               and your ability to explain complex technical concepts in simple
@@ -110,7 +110,7 @@ const Home = () => {
             </p>
             <h3>Micro Finance Bank</h3>
           </div>
-          <div className="review-4" data-aos="fade-left">
+          <div className="review-4" data-aos="fade-up">
             <p>
               From the very beginning of the project, it was clear that you were
               committed to delivering a high-quality software solution that
@@ -123,11 +123,11 @@ const Home = () => {
         </div>
       </div>
       <div className="mid-container">
-        <img data-aos="fade-right"
+        <img data-aos="zoom-in"
           src="https://i.ibb.co/jwcFNbp/pexels-sora-shimazaki-5926393.jpg"
           alt=""
         />
-        <div className="min-content" data-aos="fade-left">
+        <div className="min-content" data-aos="zoom-out">
           <p>
             As a software engineer, I specializing in assisting startups and
             small businesses in optimizing their technical infrastructure for

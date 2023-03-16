@@ -28,7 +28,7 @@ const About = () => {
   }, [inView, animation]);
 
   useEffect(() => {
-    Aos.init({duration:1000})
+    Aos.init({duration:2000})
   },[]);
 
   return (
@@ -52,7 +52,7 @@ const About = () => {
       </motion.div>
       <div className="about-banner">
         <div className="about-content">
-          <div className="sta-box" data-aos="flip-left">
+          <div className="sta-box" data-aos="flip-up">
           <h1>STACKS</h1>
           <p className="tech">These are the Technologies I have worked with</p>
           </div>

@@ -52,7 +52,7 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="map-container">
-        <h1 data-aos="flip-right">Contact</h1>
+        <h1 data-aos="flip-up">Contact</h1>
         <iframe data-aos="zoom-in"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.125109309582!2d4.5423594148250235!3d7.776556509484942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103787ecec516945%3A0x59bdb37d614c67ca!2sGbongan%20-%20Ibadan%20Rd%2C%20Osogbo%2C%20Osun!5e0!3m2!1sen!2sng!4v1678671039167!5m2!1sen!2sng"
           title="map"
@@ -76,7 +76,7 @@ const Contact = () => {
             onChange={handleOnchange}
           ></textarea>
           <div className="input">
-            <input data-aos="flip-right"
+            <input data-aos="flip-up"
               type="text"
               required
               placeholder="Enter your name"
@@ -84,7 +84,7 @@ const Contact = () => {
               name="fullname"
               onChange={handleOnchange}
             />
-            <input data-aos="flip-left"
+            <input data-aos="flip-down"
               type="email"
               required
               placeholder="Email"
@@ -93,7 +93,7 @@ const Contact = () => {
               onChange={handleOnchange}
             />
           </div>
-          <input data-aos="flip-right"
+          <input data-aos="flip-up"
             type="number"
             required
             placeholder="Enter phone"
@@ -109,7 +109,7 @@ const Contact = () => {
             name="subject"
             onChange={handleOnchange}
           />
-          <button type="submit" data-aos="fade-up">SEND</button>
+          <button type="submit" data-aos="zoom-out">SEND</button>
         </form>
         <div className="social-container">
           <h3 data-aos="zoom-out">CONTACT ME</h3>
@@ -136,7 +136,7 @@ const Contact = () => {
             </div>
             <h5 data-aos="zoom-in">Send us your query anytime!</h5>
           </div>
-          <div className="app" data-aos="flip-left">
+          <div className="app" data-aos="flip-down">
             <a href=" https://wa.me/2347036676508">
               <img
                 src="https://i.ibb.co/YfyN3V8/whatsapp.png"
