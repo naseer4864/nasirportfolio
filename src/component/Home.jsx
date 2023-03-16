@@ -12,9 +12,29 @@ const infocontainer = {
   hidden: { scale: 0 },
 };
 
+const banner = {
+  hidden :{opacity :1 , transition:{duration:1}},
+  visible: {opacity:0}
+}
+
+const item = {
+  hidden: {
+    scale: 1,
+    transition: { type: "spring", stiffness: 260, damping: 20 },
+  },
+  visible: { scale: 0 },
+}
+
+const mincontent ={
+  hidden :{opacity :1 , transition:{duration:1}},
+  visible: {opacity:0}
+}
 const Home = () => {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.22 });
+  const {Ref, inViews} = useInView({threshold: 0.40})
+  const {revs, Inviews} = useInView({threshold:0.90})
+  const {rev, Inview} = useInView({threshold:0.40})
 
   useEffect(() => {
     if (inView) {
@@ -25,6 +45,32 @@ const Home = () => {
     }
   }, [inView, animation]);
 
+  useEffect(() => {
+    if(inViews) {
+      animation.start("visible")
+    }
+    if(!inViews) {
+      animation.start("hidden")
+    }
+  },[inViews, animation]);
+
+  useEffect(() => {
+    if(Inviews){
+      animation.start("visible")
+    }
+    if(!Inviews) {
+      animation.start("hidden")
+    }
+  },[Inviews, animation])
+
+  useEffect(() => {
+    if(Inview){
+      animation.start("visible")
+    }
+    if(!Inview) {
+      animation.start("hidden")
+    }
+  }, [Inview, animation])
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate("/contact");
@@ -58,7 +104,11 @@ const Home = () => {
       </motion.div>
 
       <div className="banner-container">
-        <div className="banner">
+        <motion.div className="banner"
+        ref={Ref}
+        initial="hidden"
+        animate={animation}
+        variants={banner}>
           <h2>MISSION STATEMENT</h2>
           <p>
             I am a Full-Stack Engineer based in Nigeria,dedicated to creating
@@ -69,12 +119,16 @@ const Home = () => {
             and tinkering with electronics.
           </p>
           <button onClick={downloadResume}>DOWNLOAD RESUME</button>
-        </div>
+        </motion.div>
       </div>
       <div className="customer">
         <h1>Reviews</h1>
         <div className="reviews">
-          <div className="review-1">
+          <motion.div className="review-1"
+          ref={revs}
+          initial="hidden"
+          animate={animation}
+          variants={item}>
             <p>
               We wanted to take a moment to thank you for the outstanding job
               you did on the project for our company. Your expertise and
@@ -82,8 +136,12 @@ const Home = () => {
               with the results.
             </p>
             <h3>Jim one Global motors</h3>
-          </div>
-          <div className="review-2">
+          </motion.div>
+          <motion.div className="review-2"
+          ref={revs}
+          initial="hidden"
+          animate={animation}
+          variants={item}>
             <p>
               Your dedication to the project was evident, and we were impressed
               by your attention to detail and your commitment to delivering the
@@ -92,8 +150,12 @@ const Home = () => {
               that it was working seamlessly before delivering it to us
             </p>
             <h3>AS salam store</h3>
-          </div>
-          <div className="review-3">
+          </motion.div>
+          <motion.div className="review-3"
+          ref={revs}
+          initial="hidden"
+          animate={animation}
+          variants={item}>
             <p>
               Your communication skills were exceptional throughout the project,
               and your ability to explain complex technical concepts in simple
@@ -102,8 +164,12 @@ const Home = () => {
               had.
             </p>
             <h3>Micro Finance Bank</h3>
-          </div>
-          <div className="review-4">
+          </motion.div>
+          <motion.div className="review-4"
+          ref={revs}
+          initial="hidden"
+          animate={animation}
+          variants={item}>
             <p>
               From the very beginning of the project, it was clear that you were
               committed to delivering a high-quality software solution that
@@ -112,7 +178,7 @@ const Home = () => {
               detail was addressed.
             </p>
             <h3>SupperJara</h3>
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="mid-container">
@@ -120,7 +186,11 @@ const Home = () => {
           src="https://i.ibb.co/jwcFNbp/pexels-sora-shimazaki-5926393.jpg"
           alt=""
         />
-        <div className="min-content">
+        <motion.div className="min-content"
+        ref={rev}
+        initial="hidden"
+        animate={animation}
+        variants={mincontent}>
           <p>
             As a software engineer, I specializing in assisting startups and
             small businesses in optimizing their technical infrastructure for
@@ -128,7 +198,7 @@ const Home = () => {
             their full potential by developing robust software solutions and
             cultivating a culture of innovation and collaboration.
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

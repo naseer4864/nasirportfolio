@@ -11,9 +11,27 @@ const content = {
   hidden: { scale: 0 },
 };
 
+const square = {
+  hidden: {
+    opacity: 1,
+    transition: { duration: 1 },
+  },
+  visible: { opacity: 0 },
+};
 const About = () => {
   const animation = useAnimation();
   const { ref, inView } = useInView({ threshold: 0.22 });
+
+  const { reF, inViews } = useInView({ threshold: 0.50 });
+
+  useEffect(() => {
+    if (inViews) {
+      animation.start("visible");
+    }
+    if (!inViews) {
+      animation.start("hidden");
+    }
+  }, [inViews, animation]);
   
   useEffect(() => {
     if (inView) {
@@ -49,48 +67,52 @@ const About = () => {
           <h1>STACKS</h1>
           <p className="tech">These are the Technologies I have worked with</p>
           </div>
-          <div className="stacks">
+          <motion.div className="stacks"
+          ref={reF}
+          initial="hidden"
+          animate={animation}
+          variants={square}>
             <div className="html">
               <img src="https://i.ibb.co/Rp9SQ5Z/html.png" alt="" />
-              <h2>HTML</h2>
+              <h5>HTML</h5>
             </div>
             <div className="css">
               <img src="https://i.ibb.co/THshmCm/css.png" alt="" />
-              <h2>CSS</h2>
+              <h5>CSS</h5>
             </div>
             <div className="javas">
               <img src="https://i.ibb.co/L9b0Zs8/js.png" alt="" />
-              <h2>JAVASCRIPT</h2>
+              <h5>JAVASCRIPT</h5>
             </div>
             <div className="react">
               <img src="https://i.ibb.co/WxDmCLS/react.png" alt="" />
-              <h2>REACT JS</h2>
+              <h5>REACT JS</h5>
             </div>
             <div className="github">
               <img src="https://i.ibb.co/mFJSQCM/github.png" alt="" />
-              <h2>GITHUB</h2>
+              <h5>GITHUB</h5>
             </div>
             <div className="tail">
               <img src="https://i.ibb.co/vH9v8NK/tailwind.png" alt="" />
-              <h2>TAILWIND</h2>
+              <h5>TAILWIND</h5>
             </div>
             <div className="node">
               <img src="https://i.ibb.co/VJ1YqwY/nodes.png" alt="" />
-              <h2>NODE JS</h2>
+              <h5>NODE JS</h5>
             </div>
             <div className="expre">
               <img src="https://i.ibb.co/311SSDx/express.png" alt="" />
-              <h2>EXPRESS JS</h2>
+              <h5>EXPRESS JS</h5>
             </div>
             <div className="mongo">
               <img src="https://i.ibb.co/Cb8M1HJ/mongo.png" alt="" />
-              <h2>MONGO DB</h2>
+              <h5>MONGO DB</h5>
             </div>
             <div className="fire">
               <img src="https://i.ibb.co/J26MSV8/62ca2ce965c5299edbd41661-Firebase-removebg-preview.png" alt="" />
-              <h2>FIREBASE</h2>
+              <h5>FIREBASE</h5>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
