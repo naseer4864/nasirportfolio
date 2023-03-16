@@ -1,17 +1,23 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css"
 
 
 const Footer = () => {
   const navigate= useNavigate();
+  useEffect(() => {
+    Aos.init({duration:2000})
+  },[]);
   const handleNav = () => {
     navigate("/contact")
   }
   return (
     <div className="footer-container">
-    <h2>Intrested in working with me ?</h2>
-    <span>Do you have a project in mind and would love to bring it to live? Then let's talk.</span>
+    <h2 data-aos="flip-up">Intrested in working with me ?</h2>
+    <span data-aos="zoom-out">Do you have a project in mind and would love to bring it to live? Then let's talk.</span>
     <button onClick={handleNav}>Let's talk</button>
-      <div className="footer-app">
+      <div className="footer-app" data-aos="zoom-in">
             <a href=" https://wa.me/2347036676508">
               <img
                 src="https://i.ibb.co/YfyN3V8/whatsapp.png"
