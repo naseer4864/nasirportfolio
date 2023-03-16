@@ -1,14 +1,9 @@
 import { Link, Outlet } from "react-router-dom";
-import { Fragment, useState, useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css"
+import { Fragment, useState } from "react";
 
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    Aos.init({duration:2000})
-  },[]);
   return (
     <Fragment>
       <div className="navbar-container">
@@ -21,7 +16,7 @@ const Navbar = () => {
             )}
           </div>
         <Link to="/" className="logo">
-          <h2 data-aos="fade">NaseerCode.</h2>
+          <h2>NaseerCode.</h2>
         </Link>
         </div>
         <div className={isMobile ? "mobile-links" : "nav-links"} onClick={() => setIsMobile(false)}>
@@ -41,7 +36,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="firemail" data-aos="fade">
+        <div className="firemail">
           <a href="mailto:naseernoor4864@gmail.com">Fire Me An Email</a>
         </div>
       </div>
