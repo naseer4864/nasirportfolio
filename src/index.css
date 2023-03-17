@@ -11,6 +11,7 @@
   background-color: rgb(237, 237, 237);
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid gray;
   align-items: center;
   position: sticky;
   top: 0%;
@@ -31,7 +32,7 @@
 
 
 .logo > h2 {
-  color: rgb(150, 213, 234);
+  color: gray;
   font-weight: bolder;
 }
 
@@ -140,7 +141,7 @@
 }
 
 .info > h1 {
-  color: rgb(150, 213, 234);
+  color: gray;
 }
 
 .info > button {
@@ -212,7 +213,7 @@
 }
 
 .banner > h2 {
-  color: rgb(150, 213, 234);
+  color: gray;
   margin-top: 20px;
 }
 .banner > p {
@@ -384,7 +385,7 @@
 }
 .customer > h1 {
   margin: 20px;
-  color: rgb(150, 213, 234);
+  color: gray;
 }
 
 .reviews {
@@ -475,7 +476,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: rgb(150, 213, 234);
+  color: gray;
 }
 
 .about-header > p {
@@ -515,7 +516,7 @@
 }
 
 .sta-box > h1 {
-  color: rgb(150, 213, 234);
+  color: gray;
 }
 .tech {
   color: black;
@@ -777,7 +778,7 @@
 
 .map-container > h1 {
   margin-top: 20px;
-  color: rgb(150, 213, 234);
+  color: gray;
 }
 iframe {
   margin-bottom: 20px;
@@ -971,7 +972,7 @@ form > button:hover {
 
 .port-header > h1 {
   margin-top: 20px;
-  color: rgb(150, 213, 234);
+  color: gray;
 }
 
 .recent-works-container {
