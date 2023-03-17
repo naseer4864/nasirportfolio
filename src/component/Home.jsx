@@ -7,7 +7,7 @@ import "aos/dist/aos.css"
 
 const Home = () => {
   useEffect(() => {
-    Aos.init({duration:2000})
+    Aos.init({duration:1000})
   },[]);
   
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ const Home = () => {
 
       <div className="banner-container">
         <div className="banner">
-          <h2 data-aos="fade">MISSION STATEMENT</h2>
+          <h2 data-aos="flip-down">MISSION STATEMENT</h2>
           <p data-aos="fade-up">
             I am a Full-Stack Engineer based in Nigeria,dedicated to creating
             clean, efficient, and user-friendly applications. With a strong

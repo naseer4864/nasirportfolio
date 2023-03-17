@@ -7,7 +7,7 @@ import "aos/dist/aos.css"
 const Footer = () => {
   const navigate= useNavigate();
   useEffect(() => {
-    Aos.init({duration:2000})
+    Aos.init({duration:1000})
   },[]);
   const handleNav = () => {
     navigate("/contact")

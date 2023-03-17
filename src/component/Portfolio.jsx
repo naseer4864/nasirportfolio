@@ -6,7 +6,7 @@ import "aos/dist/aos.css"
 
 const Portfolio = () => {
   useEffect(() => {
-    Aos.init({duration:2000})
+    Aos.init({duration:1000})
   },[]);
 
   return (
