@@ -16,7 +16,7 @@ const Navbar = () => {
             )}
           </div>
         <Link to="/" className="logo">
-          <h2>Naseer</h2>
+          <h2>NaseerCode</h2>
         </Link>
         </div>
         <div className={isMobile ? "mobile-links" : "nav-links"} onClick={() => setIsMobile(false)}>
