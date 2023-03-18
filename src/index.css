@@ -5,6 +5,7 @@
   text-decoration: none;
 }
 
+
 .navbar-container {
   width: 100%;
   height: 100px;
@@ -22,7 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
 }
 
 .logo {
@@ -192,6 +193,8 @@
     font-size: 1.2rem;
   }
 }
+
+
 
 .banner-container {
   width: 100%;
@@ -375,6 +378,16 @@
   }
 }
 
+@media screen and (max-width:375px) {
+  .footer-container > h2 {
+    font-size: 1rem;
+  }
+
+  .footer-container > span {
+    font-size: 0.8rem;
+  }
+}
+
 
 
 .customer {
@@ -440,7 +453,7 @@
   .review-3,
   .review-4 {
     margin: 8px 5px;
-    width: 100%;
+    width: 90%;
   }
 }
 

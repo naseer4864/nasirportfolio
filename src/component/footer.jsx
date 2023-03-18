@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <div className="footer-container">
     <h2 data-aos="flip-up">Intrested in working with me ?</h2>
-    <span data-aos="zoom-out">Do you have a project in mind and would love to bring it to live? Then let's talk.</span>
+    <span data-aos="zoom-out">Do you have a project and would love to bring it to live?</span>
     <button onClick={handleNav}>Let's talk</button>
       <div className="footer-app" data-aos="zoom-in">
             <a href=" https://wa.me/2347036676508">
