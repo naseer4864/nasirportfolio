@@ -418,7 +418,7 @@
 .review-3,
 .review-4 {
   width: 300px;
-  height: fit-content;
+  height: 200px;
   box-shadow: 0px 1px 9px 6px rgba(148, 139, 139, 0.75);
   display: flex;
   justify-content: space-around;
@@ -469,6 +469,15 @@
     flex-direction: column;
     width: 97%;
     gap: 5px;
+  }
+
+  .review-1,
+  .review-2,
+  .review-3,
+  .review-4 {
+    margin: 8px 5px;
+    width: 90%;
+    height: fit-content;
   }
 }
 
