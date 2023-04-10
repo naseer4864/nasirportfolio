@@ -339,6 +339,7 @@
   margin-bottom: 40px;
   color: gray;
 }
+
 .footer-container > button {
   padding: 10px 20px;
   color: white;
@@ -1023,7 +1024,8 @@ form > button:hover {
 .recent-3,
 .recent-4,
 .recent-5,
-.recent-6 {
+.recent-6,
+.recent-7 {
   width: 100%;
   height: 200px;
   display: flex;
@@ -1040,7 +1042,8 @@ form > button:hover {
 .recent-3 > img,
 .recent-4 > img,
 .recent-5 > img,
-.recent-6 > img {
+.recent-6 > img,
+.recent-7 > img {
   width: 100%;
   height: 150px;
 }
@@ -1050,7 +1053,8 @@ form > button:hover {
 .recent-3 > a,
 .recent-4 > a,
 .recent-5 > a,
-.recent-6 > a {
+.recent-6 > a,
+.recent-7 > a {
   color: gray;
 }
 

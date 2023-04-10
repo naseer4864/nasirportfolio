@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Aos from "aos";
-import "aos/dist/aos.css"
-
+import "aos/dist/aos.css";
 
 const defaultForm = {
   fullname: "",
@@ -46,14 +45,15 @@ const Contact = () => {
       });
   };
   useEffect(() => {
-    Aos.init({ duration: 1000 })
+    Aos.init({ duration: 1000 });
   }, []);
 
   return (
     <div className="contact-container">
       <div className="map-container">
         <h1 data-aos="flip-up">Contact</h1>
-        <iframe data-aos="zoom-in"
+        <iframe
+          data-aos="zoom-in"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3953.125109309582!2d4.5423594148250235!3d7.776556509484942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103787ecec516945%3A0x59bdb37d614c67ca!2sGbongan%20-%20Ibadan%20Rd%2C%20Osogbo%2C%20Osun!5e0!3m2!1sen!2sng!4v1678671039167!5m2!1sen!2sng"
           title="map"
           width="1200"
@@ -65,7 +65,8 @@ const Contact = () => {
       <div className="form-container">
         <form onSubmit={handleSubmit}>
           <h3>Get In Touch</h3>
-          <textarea data-aos="fade-down"
+          <textarea
+            data-aos="fade-down"
             name="message"
             id=""
             required
@@ -76,7 +77,8 @@ const Contact = () => {
             onChange={handleOnchange}
           ></textarea>
           <div className="input">
-            <input data-aos="flip-up"
+            <input
+              data-aos="flip-up"
               type="text"
               required
               placeholder="Enter your name"
@@ -84,7 +86,8 @@ const Contact = () => {
               name="fullname"
               onChange={handleOnchange}
             />
-            <input data-aos="flip-down"
+            <input
+              data-aos="flip-down"
               type="email"
               required
               placeholder="Email"
@@ -93,7 +96,8 @@ const Contact = () => {
               onChange={handleOnchange}
             />
           </div>
-          <input data-aos="flip-up"
+          <input
+            data-aos="flip-up"
             type="number"
             required
             placeholder="Enter phone"
@@ -101,7 +105,8 @@ const Contact = () => {
             name="number"
             onChange={handleOnchange}
           />
-          <input data-aos="flip-left"
+          <input
+            data-aos="flip-left"
             type="text"
             required
             placeholder="Enter Subject"
@@ -109,7 +114,9 @@ const Contact = () => {
             name="subject"
             onChange={handleOnchange}
           />
-          <button type="submit" data-aos="zoom-out">SEND</button>
+          <button type="submit" data-aos="zoom-out">
+            SEND
+          </button>
         </form>
         <div className="social-container">
           <h3 data-aos="zoom-out">CONTACT ME</h3>
@@ -123,7 +130,9 @@ const Contact = () => {
           <div className="phone" data-aos="fade-down">
             <div className="same" data-aos="fade-up">
               <i className="fa-solid fa-phone" data-aos="zoom-in"></i>
-              <a href="tel:+2349134914475" data-aos="zoom-out">+234 913 491 4475</a>
+              <a href="tel:+2349134914475" data-aos="zoom-out">
+                +234 913 491 4475
+              </a>
             </div>
             <h5 data-aos="fade">Mon to Friday 9am to 8pm</h5>
           </div>

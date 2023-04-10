@@ -94,6 +94,19 @@ const Portfolio = () => {
             DEMO
           </a>
         </div>
+        <div className="recent-7" data-aos="fade-up">
+          <img
+            src="https://i.ibb.co/BshJY8n/Screen-Shot-2023-04-10-at-11-01-37-AM.png"
+            alt=""
+          />
+          <a
+            href="https://flexify-amber.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DEMO
+          </a>
+        </div>
       </div>
     </div>
   );
