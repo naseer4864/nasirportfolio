@@ -118,6 +118,12 @@
   }
 }
 
+@media screen and (max-width:650px) {
+  .logo > h2 {
+    font-size: 0.9rem;
+  }
+}
+
 .home-container {
   width: 100%;
   height: fit-content;
