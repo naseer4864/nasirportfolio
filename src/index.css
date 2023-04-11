@@ -7,15 +7,17 @@
 }
 
 
+
 .navbar-container {
   width: 100%;
   height: 100px;
   background-color: rgb(237, 237, 237);
+  background-color: #181526;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid gray;
   align-items: center;
   position: sticky;
+  box-shadow: 0px 0px 25px #1d192e;
   top: 0%;
   z-index: 100;
 }
@@ -34,7 +36,7 @@
 
 
 .logo > h2 {
-  color: gray;
+  color: white;
   font-weight: bolder;
 }
 
@@ -48,13 +50,12 @@
 .nav-link > .link {
   padding: 40px 60px;
   font-weight: 500;
-  color: black;
+  color: white;
   transition: all 1s ease;
 }
 
 .link:hover {
-  background-color: rgb(166, 166, 166);
-  color: white;
+  color: #409444;
 }
 
 .mobile-menu {
@@ -67,7 +68,7 @@
 }
 
 .firemail > a {
-  color: black;
+  color: white;
 }
 
 .firemail >a:hover {
@@ -94,13 +95,15 @@
     width: 100%;
     height: fit-content;
   }
-
+  
   .nav-link {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(237, 237, 237);
+    background-color: #181526;
+    opacity: 0.8;
+
   }
 
   .nav-link > .link {
@@ -115,6 +118,10 @@
   }
   .nav-links {
     display: none;
+  }
+
+  .fa-solid {
+    color: white;
   }
 }
 
@@ -140,6 +147,7 @@
   justify-content: space-around;
   align-items: center;
   margin: 0px 10px;
+  background-color: #181526;
 }
 
 .info {
@@ -153,9 +161,12 @@
 }
 
 .info > h1 {
-  color: gray;
+  color: white;
 }
 
+.info > h2 {
+  color: white;
+}
 .info > button {
   padding: 24px 60px;
   background-color: rgb(237, 237, 237);
@@ -410,7 +421,7 @@
 }
 .customer > h1 {
   margin: 20px;
-  color: gray;
+  color: rgba(9, 46, 54, 0.8295912114845938);
 }
 
 .reviews {
@@ -427,14 +438,16 @@
 .review-3,
 .review-4 {
   width: 300px;
-  height: 200px;
-  box-shadow: 0px 1px 9px 6px rgba(148, 139, 139, 0.75);
+  height: 230px;
+  box-shadow: 0px 0px 25px lightgray;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
   transition: 1s ease;
   margin: 50px 0px;
+  line-height: 1.3;
+  border-radius: 10px;
 }
 
 .review-1 > p,
@@ -507,7 +520,7 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
-  box-shadow: 0px 3px 5px 3px rgba(175, 172, 172, 0.75);
+  box-shadow: 0px 0px 25px lightgray;
 }
 
 .about-header > h1 {
@@ -516,7 +529,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  color: gray;
+  color: rgba(9, 46, 54, 0.8295912114845938);
 }
 
 .about-header > p {
@@ -535,7 +548,7 @@
 }
 
 .about-content {
-  width: 80%;
+  width: 90%;
   height: fit-content;
   margin: 50px 0px;
   display: flex;
@@ -556,7 +569,7 @@
 }
 
 .sta-box > h1 {
-  color: gray;
+  color: rgba(9, 46, 54, 0.8295912114845938);
 }
 .tech {
   color: black;
@@ -818,7 +831,7 @@
 
 .map-container > h1 {
   margin-top: 20px;
-  color: gray;
+  color: rgba(9, 46, 54, 0.8295912114845938);
 }
 iframe {
   margin-bottom: 20px;
@@ -850,6 +863,10 @@ form {
   gap: 15px;
 }
 
+form > h3 {
+  color: rgba(9, 46, 54, 0.8295912114845938);
+}
+
 .social-container {
   width: 300px;
   height: fit-content;
@@ -863,6 +880,7 @@ form {
 .social-container > h3 {
   color: black;
 }
+
 textarea {
   width: 100%;
   border: 1px solid gray;
@@ -1012,7 +1030,7 @@ form > button:hover {
 
 .port-header > h1 {
   margin-top: 20px;
-  color: gray;
+  color: rgba(9, 46, 54, 0.8295912114845938);
 }
 
 .recent-works-container {
@@ -1061,7 +1079,7 @@ form > button:hover {
 .recent-5 > a,
 .recent-6 > a,
 .recent-7 > a {
-  color: gray;
+  color: rgba(9, 46, 54, 0.8295912114845938);
 }
 
 @media screen and (max-width: 768px) {
