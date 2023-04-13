@@ -1020,10 +1020,16 @@ form > button:hover {
   border-radius: 50%;
   box-shadow: 0px 0px 0px 5px rgb(27,160,241);
 }
+
 .git {
   height: 30px;
   border-radius: 50%;
   box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.75);
+}
+.footer-git {
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 5px white;
 }
 
 .linkedin {

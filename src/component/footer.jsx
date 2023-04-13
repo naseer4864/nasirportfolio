@@ -50,7 +50,7 @@ const Footer = () => {
               <img
                 src="https://i.ibb.co/QnD3VkH/Git-Hub-Mark.png"
                 alt=""
-                className="git"
+                className="footer-git"
               />
             </a>
             <a href="https://www.linkedin.com/in/nasirudeen-nurudeen-44a702255?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BoqhK0QLTSHyXv5ZGehahXQ%3D%3D">
