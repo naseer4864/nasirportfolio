@@ -155,21 +155,21 @@ const Contact = () => {
             </a>
             <a href="https://www.facebook.com/nassopeyemi">
               <img
-                src="https://i.ibb.co/M8Hyg7n/facebook.png"
+                src="https://i.ibb.co/vLnnzFm/Facebook-Logo-2019.png"
                 alt=""
                 className="face"
               />
             </a>
             <a href="https://www.instagram.com/naseeradeniyi/">
               <img
-                src="https://i.ibb.co/rsFxRLw/instagram.png"
+                src="https://i.ibb.co/kc1prbH/pngtree-instagram-icon-png-image-6315974.png"
                 alt=""
                 className="insta"
               />
             </a>
             <a href="https://twitter.com/naseeroladayo/">
               <img
-                src="https://i.ibb.co/5Yv5KpP/twitter.png"
+                src="https://i.ibb.co/f9dbYZC/png-transparent-computer-icons-logo-twitter-miscellaneous-blue-logo-thumbnail.png"
                 alt=""
                 className="twitt"
               />
