@@ -980,7 +980,7 @@ form > button:hover {
   width: 100%;
   height: fit-content;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   gap: 30px;
