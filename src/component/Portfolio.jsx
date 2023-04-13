@@ -107,6 +107,19 @@ const Portfolio = () => {
             DEMO
           </a>
         </div>
+        <div className="recent-8" data-aos="fade-down">
+          <img
+            src="https://i.ibb.co/jJ3WpY3/Screen-Shot-2023-04-13-at-4-14-59-AM.png"
+            alt=""
+          />
+          <a
+            href="https://mathmaster.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DEMO
+          </a>
+        </div>
       </div>
     </div>
   );

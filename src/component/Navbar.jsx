@@ -4,11 +4,20 @@ import { Fragment, useState } from "react";
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const handleMouse = (e) => {
+    e.preventDefault();
+    if (window.screenY  > 100) {
+      setIsMobile(false)
+    } else {
+      setIsMobile(true);
+    }
+  };
+  
   return (
     <Fragment>
       <div className="navbar-container">
         <div className="menu-container">
-          <div className="mobile-menu" onClick={() => setIsMobile(!isMobile)}>
+          <div className="mobile-menu" onClick={() => setIsMobile(!isMobile)} onMouseOut={handleMouse}>
             {isMobile ? (
               <i className="fa-solid fa-xmark"></i>
             ) : (
