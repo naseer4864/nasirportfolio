@@ -986,6 +986,17 @@ form > button:hover {
   gap: 30px;
 }
 
+.footer-app {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0px 10px;
+}
+
 .whats {
   height: 30px;
   border-radius: 50%;

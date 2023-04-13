@@ -17,7 +17,7 @@ const Footer = () => {
     <h2 data-aos="flip-up">Intrested in working with me ?</h2>
     <span data-aos="zoom-out">Do you have a project and would love to bring it to live?</span>
     <button onClick={handleNav}>Let's talk</button>
-      <div className="app" data-aos="zoom-in">
+      <div className="footer-app" data-aos="zoom-in">
             <a href=" https://wa.me/2347036676508">
               <img
                 src="https://i.ibb.co/YfyN3V8/whatsapp.png"
