@@ -24,6 +24,13 @@ const Home = () => {
     link.click();
     document.body.removeChild(link);
   };
+
+  const handleSeemoreSkils = () => {
+    navigate("/About")
+  }
+  const handleSeemorePro = () => {
+    navigate("/Portfolio")
+  }
   
   return (
     <div className="home-container">
@@ -50,6 +57,73 @@ const Home = () => {
           </p>
           <button onClick={downloadResume}>DOWNLOAD RESUME</button>
         </div>
+      </div>
+      <div className="tech-home-container">
+        <h2>My Skills</h2>
+        <div className="stacks-home">
+        <div className="javas" data-aos="zoom-in">
+              <img src="https://i.ibb.co/L9b0Zs8/js.png" alt="" />
+              <h5>JAVASCRIPT</h5>
+            </div>
+            <div className="react" data-aos="zoom-out">
+              <img src="https://i.ibb.co/WxDmCLS/react.png" alt="" />
+              <h5>REACT JS</h5>
+            </div>
+            <div className="github" data-aos="zoom-in">
+              <img src="https://i.ibb.co/mFJSQCM/github.png" alt="" />
+              <h5>GITHUB</h5>
+            </div>
+            <div className="node" data-aos="zoom-in">
+              <img src="https://i.ibb.co/VJ1YqwY/nodes.png" alt="" />
+              <h5>NODE JS</h5>
+            </div>
+        </div>
+        <button className="seemore-stacks" onClick={handleSeemoreSkils}>See More Skills</button>
+      </div>
+      <div className="home-recent-projects-container">
+        <h2>My Recent Projects</h2>
+        <div className="recent-works-container">
+        <div className="recent-1" data-aos="fade-up">
+          <img
+            src="https://i.ibb.co/PjxnSVy/Screen-Shot-2023-03-13-at-11-05-35-AM.png"
+            alt=""
+          />
+          <a
+            href="https://as-salam-bedding.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DEMO
+          </a>
+        </div>
+        <div className="recent-3" data-aos="fade-up">
+          <img
+            src="https://i.ibb.co/nnQ76T9/Screen-Shot-2023-03-13-at-11-07-37-AM.png"
+            alt=""
+          />
+          <a
+            href="https://taskly-omega.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DEMO
+          </a>
+        </div>
+        <div className="recent-7" data-aos="fade-up">
+          <img
+            src="https://i.ibb.co/BshJY8n/Screen-Shot-2023-04-10-at-11-01-37-AM.png"
+            alt=""
+          />
+          <a
+            href="https://flexify-amber.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DEMO
+          </a>
+        </div>
+        </div>
+        <button className="seemore-project" onClick={handleSeemorePro}>See More Projects</button>
       </div>
       <div className="customer">
         <h1 data-aos="fade">Reviews</h1>

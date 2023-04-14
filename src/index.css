@@ -1115,6 +1115,8 @@ form > button:hover {
 .recent-8 > img {
   width: 100%;
   height: 150px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 .recent-1 > a,
@@ -1137,4 +1139,81 @@ form > button:hover {
   .recent-works-container {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+/* this is a new updates on homepage */
+
+.tech-home-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: pink; */
+  margin: 40px 0px;
+  gap: 20px;
+}
+
+.tech-home-container > h2 {
+  margin: 10px;
+  color: #1d192e;
+}
+
+.stacks-home {
+  width: 90%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 20px;
+   
+}
+
+.seemore-stacks {
+  padding:20px 60px;
+  margin-top: 30px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .stacks-home {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .stacks-home {
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    gap: 20px;
+  }
+}
+
+.home-recent-projects-container {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1d192e;
+}
+
+.home-recent-projects-container > h2 {
+  color: white;
+  margin: 10px;
+}
+
+.seemore-project {
+  padding:20px 60px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid gray;
+  cursor: pointer;
+  margin-bottom: 20px;
+  
 }
