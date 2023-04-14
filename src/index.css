@@ -3,9 +3,7 @@
   padding: 0%;
   box-sizing: border-box;
   text-decoration: none;
-  
 }
-
 
 
 .navbar-container {
@@ -27,6 +25,7 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
+  margin-left: 4px;
 }
 
 .logo {
@@ -65,6 +64,7 @@
 
 .firemail {
   padding: 36px 40px;
+  margin-right: 5px;
 }
 
 .firemail > a {
@@ -338,7 +338,6 @@
 .footer-container {
   width: 100%;
   border-top: 1px solid gray;
-  padding: 0px 10px;
   height: fit-content;
   display: flex;
   justify-content: center;
@@ -1102,7 +1101,8 @@ form > button:hover {
   gap: 10px;
   flex-direction: column;
   border-radius: 15px;
-  box-shadow: -2px 0px 6px 5px rgba(172, 172, 172, 0.75);
+  border-bottom: 1px solid #181526;
+  /* box-shadow: -2px 0px 6px px rgba(172, 172, 172, 0.75); */
 }
 
 .recent-1 > img,
@@ -1176,6 +1176,7 @@ form > button:hover {
   outline: none;
   border: 1px solid gray;
   cursor: pointer;
+  color: black;
 }
 
 @media screen and (max-width: 768px) {
@@ -1200,11 +1201,11 @@ form > button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #1d192e;
+  /* background-color: #1d192e; */
 }
 
 .home-recent-projects-container > h2 {
-  color: white;
+  color:#181526;
   margin: 10px;
 }
 
@@ -1215,5 +1216,6 @@ form > button:hover {
   border: 1px solid gray;
   cursor: pointer;
   margin-bottom: 20px;
+  color: black;
   
 }

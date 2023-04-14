@@ -5,12 +5,7 @@ import { Fragment, useState } from "react";
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const handleMouse = (e) => {
-    e.preventDefault();
-    if (window.screenY  > 100) {
-      setIsMobile(false)
-    } else {
-      setIsMobile(true);
-    }
+    setIsMobile(false)
   };
   
   return (
