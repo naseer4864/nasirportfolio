@@ -986,7 +986,7 @@ form > button:hover {
 }
 
 .footer-app {
-  width: 100%;
+  width: 90%;
   height: fit-content;
   display: flex;
   justify-content: center;
@@ -994,6 +994,7 @@ form > button:hover {
   flex-wrap: wrap;
   gap: 20px;
   padding: 0px 10px;
+  
 }
 
 .whats {
@@ -1102,7 +1103,6 @@ form > button:hover {
   flex-direction: column;
   border-radius: 15px;
   border-bottom: 1px solid #181526;
-  /* box-shadow: -2px 0px 6px px rgba(172, 172, 172, 0.75); */
 }
 
 .recent-1 > img,
@@ -1150,8 +1150,7 @@ form > button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background-color: pink; */
-  margin: 40px 0px;
+  margin: 40px 10px;
   gap: 20px;
 }
 
@@ -1201,7 +1200,6 @@ form > button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background-color: #1d192e; */
 }
 
 .home-recent-projects-container > h2 {

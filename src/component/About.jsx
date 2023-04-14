@@ -12,7 +12,7 @@ const About = () => {
 
   return (
     <div className="about-container">
-      <div className="about-header" data-aos="zoom-out">
+      <div className="about-header" data-aos="zoom-in">
         <h1>ABOUT ME</h1>
       <p>
         I am a Full-Stack Software Engineer who believes that every line of code
@@ -32,43 +32,43 @@ const About = () => {
           <p className="tech">These are the Technologies I have worked with</p>
           </div>
           <div className="stacks">
-            <div className="html" data-aos="zoom-in">
+            <div className="html" data-aos="flip-down">
               <img src="https://i.ibb.co/Rp9SQ5Z/html.png" alt="" />
               <h5>HTML</h5>
             </div>
-            <div className="css" data-aos="zoom-out">
+            <div className="css" data-aos="flip-up">
               <img src="https://i.ibb.co/THshmCm/css.png" alt="" />
               <h5>CSS</h5>
             </div>
-            <div className="javas" data-aos="zoom-in">
+            <div className="javas" data-aos="flip-down">
               <img src="https://i.ibb.co/L9b0Zs8/js.png" alt="" />
               <h5>JAVASCRIPT</h5>
             </div>
-            <div className="react" data-aos="zoom-out">
+            <div className="react" data-aos="flip-up">
               <img src="https://i.ibb.co/WxDmCLS/react.png" alt="" />
               <h5>REACT JS</h5>
             </div>
-            <div className="github" data-aos="zoom-in">
+            <div className="github" data-aos="flip-down">
               <img src="https://i.ibb.co/mFJSQCM/github.png" alt="" />
               <h5>GITHUB</h5>
             </div>
-            <div className="tail" data-aos="zoom-out">
+            <div className="tail" data-aos="flip-up">
               <img src="https://i.ibb.co/vH9v8NK/tailwind.png" alt="" />
               <h5>TAILWIND</h5>
             </div>
-            <div className="node" data-aos="zoom-in">
+            <div className="node" data-aos="flip-down">
               <img src="https://i.ibb.co/VJ1YqwY/nodes.png" alt="" />
               <h5>NODE JS</h5>
             </div>
-            <div className="expre" data-aos="zoom-out">
+            <div className="expre" data-aos="flip-up">
               <img src="https://i.ibb.co/311SSDx/express.png" alt="" />
               <h5>EXPRESS JS</h5>
             </div>
-            <div className="mongo" data-aos="zoom-in">
+            <div className="mongo" data-aos="flip-down">
               <img src="https://i.ibb.co/Cb8M1HJ/mongo.png" alt="" />
               <h5>MONGO DB</h5>
             </div>
-            <div className="fire" data-aos="zoom-out">
+            <div className="fire" data-aos="flip-up">
               <img src="https://i.ibb.co/J26MSV8/62ca2ce965c5299edbd41661-Firebase-removebg-preview.png" alt="" />
               <h5>FIREBASE</h5>
             </div>

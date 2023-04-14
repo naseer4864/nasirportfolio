@@ -170,11 +170,11 @@ const Home = () => {
         </div>
       </div>
       <div className="mid-container">
-        <img data-aos="zoom-in"
+        <img data-aos="flip-up"
           src="https://i.ibb.co/jwcFNbp/pexels-sora-shimazaki-5926393.jpg"
           alt=""
         />
-        <div className="min-content" data-aos="zoom-out">
+        <div className="min-content" data-aos="flip-down">
           <p>
             As a software engineer, I specializing in assisting startups and
             small businesses in optimizing their technical infrastructure for
