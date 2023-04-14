@@ -34,7 +34,7 @@ const Footer = () => {
             </a>
             <a href="https://www.instagram.com/naseeradeniyi/">
               <img
-                src="https://i.ibb.co/kc1prbH/pngtree-instagram-icon-png-image-6315974.png"
+                src="https://i.ibb.co/4VDZsq1/pngtree-instagram-logo-inverse-png-image-556198.jpg"
                 alt=""
                 className="insta"
                 />
