@@ -120,6 +120,19 @@ const Portfolio = () => {
             DEMO
           </a>
         </div>
+        <div className="recent-8" data-aos="fade-up">
+          <img
+            src="https://i.ibb.co/bmX4hL0/Screen-Shot-2023-04-29-at-9-03-56-AM.png"
+            alt=""
+          />
+          <a
+            href="https://easyrent-olive.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DEMO
+          </a>
+        </div>
       </div>
     </div>
   );
