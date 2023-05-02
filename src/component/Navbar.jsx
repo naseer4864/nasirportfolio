@@ -2,6 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import { Fragment, useState } from "react";
 
 
+
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(false);
   
@@ -18,7 +19,7 @@ const Navbar = () => {
             )}
           </div>
         <Link to="/" className="logo">
-          <h2>NaseerCode</h2>
+          <h2>Naseer</h2>
         </Link>
         </div>
         <div className={isMobile ? "mobile-links" : "nav-links"} onClick={() => setIsMobile(false)}>
