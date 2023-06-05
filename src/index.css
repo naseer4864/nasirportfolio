@@ -1218,3 +1218,26 @@ form > button:hover {
   color: black;
   
 }
+
+
+.spinner-container {
+  position: absolute;
+  width: 56%;
+  height: 64%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:rgba(247, 245, 245, 0.876);
+  z-index: 1;
+}
+
+.spinner-container > img {
+  height: 200px;
+}
+
+@media screen and (max-width: 650px) {
+  .spinner-container {
+    width: 95%;
+    height: 70%;
+  }
+}
