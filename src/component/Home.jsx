@@ -85,6 +85,19 @@ const Home = () => {
         <div className="recent-works-container">
         <div className="recent-1" data-aos="fade-up">
           <img
+            src="https://i.ibb.co/cDKf1CJ/places.png"
+            alt=""
+          />
+          <a
+            href="https://uniquesplace.web.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DEMO
+          </a>
+        </div>
+        <div className="recent-1" data-aos="fade-up">
+          <img
             src="https://i.ibb.co/PjxnSVy/Screen-Shot-2023-03-13-at-11-05-35-AM.png"
             alt=""
           />
@@ -103,19 +116,6 @@ const Home = () => {
           />
           <a
             href="https://taskly-omega.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            DEMO
-          </a>
-        </div>
-        <div className="recent-7" data-aos="fade-up">
-          <img
-            src="https://i.ibb.co/BshJY8n/Screen-Shot-2023-04-10-at-11-01-37-AM.png"
-            alt=""
-          />
-          <a
-            href="https://flexify-amber.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
